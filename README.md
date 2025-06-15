@@ -193,15 +193,12 @@ In all other remaining cases (i.e., if Creep_T is not greater than Threshold_Val
 
 ## （可选）测试数据生成
 Test Scenario 1: (If selected Speed_0_3.1) The test scenario includes the following paths:
+
 [Speed_0_3.1, State_A_5_1.1, Torque_N_A_6_1.1, Torque_W_A_6_1.4]
+
 The constructed system of constraint equations is as follows:
-{
-  Speed_V != 1
-  Speed_S = 3
-  System_State == 'Active'
-  Torque_F_1 = 1
-  Torque_F_2 != 1
-}
+
+![image](github_img/equations.png)
 
 
 
