@@ -6,7 +6,8 @@ If Speed_V is not equal to 1, then Speed_S is set to 3.
 Otherwise, if Motor_S > 0, then Speed_S is set to ESP_S; otherwise, Speed_S is set to 5.
 ```
 
-<img src="C:\Users\XT\AppData\Roaming\Typora\typora-user-images\image-20250615164400246.png" alt="image-20250615164400246" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615164400246.png)
+
 
 ```
 State_A_5_1
@@ -15,7 +16,7 @@ If the System_State is 'Idle', then Torque_F is set to 0.5.
 Otherwise, if the System_State is 'Error', then Torque_F is set to 0.
 ```
 
-<img src="C:\Users\XT\AppData\Roaming\Typora\typora-user-images\image-20250615155040710.png" alt="image-20250615155040710" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615155040710.png)
 
 ```
 Torque_N_A_6_1
@@ -26,7 +27,8 @@ If Speed_S < 4, Creep_T is set to the value of Load_Factor.
 Otherwise, Creep_S is set to Default_Creep.
 ```
 
-<img src="C:\Users\XT\AppData\Roaming\Typora\typora-user-images\image-20250615164623464.png" alt="image-20250615164623464" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615164623464.png)
+
 
 ```
 Torque_W_A_6_1
@@ -38,7 +40,8 @@ If none of the preceding conditions apply, the system then considers creep compe
 In all other remaining cases (i.e., if Creep_T is not greater than Threshold_Value and previous conditions were not met), the module completes its execution without further modifying Output_Torque.
 ```
 
-<img src="C:\Users\XT\Downloads\image-20250615155719018.png" alt="image-20250615155719018" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615155719018.png)
+
 
 ## 依赖关系提取
 
@@ -182,8 +185,8 @@ In all other remaining cases (i.e., if Creep_T is not greater than Threshold_Val
 3. `dep :=< State_A_5_1.1, produce, Torque_F = 1, Torque_F = 1, consumedBy, Torque_N_A_6_1.1 >`
 4. `dep :=< Torque_N_A_6_1.3, produce, Creep_T = (-inf, inf), Creep_T > Threshold_Value, consumedBy, Torque_W_A_6_1.4 >`
 
-<img src="C:\Users\XT\AppData\Roaming\Typora\typora-user-images\image-20250615170954890.png" alt="image-20250615170954890" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615170954890.png)
 
 ### 得到测试场景
 
-<img src="C:\Users\XT\AppData\Roaming\Typora\typora-user-images\image-20250615171016591.png" alt="image-20250615171016591" style="zoom:50%;" />
+![image](https://github.com/Darius-XT/RE2025-TestCaseGeneration-Automotive/blob/main/github_img/image-20250615171016591.png)
